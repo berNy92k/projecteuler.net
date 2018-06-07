@@ -4,13 +4,14 @@ package projectEuler;
 //
 //  What is the largest prime factor of the number 600851475143 ?
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
 public class LargestPrimeFactor {
     public static void main(String[] args) {
 
-        long number = 13195;
+        long number = 600851475143L;
         double pierwNumber = Math.sqrt(number);
         List<Long> liczbyPierwsze = new LinkedList<>();
 
@@ -28,7 +29,12 @@ public class LargestPrimeFactor {
             }
         }
 
-        System.out.println(liczbyPierwsze);
+        if (liczbyPierwsze.size() == 0){
+            liczbyPierwsze.add(0L);
+        }
+
+        System.out.println("All prime factors: " + liczbyPierwsze);
+        System.out.println("The largest prime factor is: " + Collections.max(liczbyPierwsze));
 
     }
 }
