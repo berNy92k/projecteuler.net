@@ -11,11 +11,50 @@ public class LargestPalindromeProduct {
     public static void main(String[] args) {
 
         System.out.println(palindrom2digit());
-        theBiggest(palindrom2digit());
+        theBiggestOf2Digit(palindrom2digit());
 
+        System.out.println();
+
+        System.out.println(palindrom3digit());
+        theBiggestOf3Digit(palindrom3digit());
     }
 
-    private static void theBiggest(Map<Integer, String> stringStringMap) {
+    private static void theBiggestOf3Digit(Map<Integer, String> integerStringMap) {
+        int max = 0;
+        for (int i = 0; i < integerStringMap.size(); i++) {
+            max = Collections.max(integerStringMap.keySet());
+        }
+        System.out.print("Largest palindrome made from the produck of dwo 3-digit numbers is: " + max + " = " + integerStringMap.get(max));
+        System.out.println();
+    }
+
+    private static Map<Integer, String> palindrom3digit() {
+        Map<Integer, String> palindromy3digit = new LinkedHashMap();
+
+        int a = 100;
+        while (a < 1000) {
+
+            for (int b = 100; b < 1000; b++) {
+                int digitThreeInt = a * b;
+                String digiThree = String.valueOf(a * b);
+
+                char[] digitThreeCharReverse = new char[digiThree.length()];
+
+                for (int i = 0; i <= digiThree.length() - 1; i++) {
+                    digitThreeCharReverse[i] = digiThree.charAt(digiThree.length() - i - 1);
+                }
+
+                String digitTwoStringReverse = String.valueOf(digitThreeCharReverse);
+                if (digiThree.equals(digitTwoStringReverse)) {
+                    palindromy3digit.put(digitThreeInt, (String.valueOf(a) + " * " + String.valueOf(b)));
+                }
+            }
+            a++;
+        }
+        return palindromy3digit;
+    }
+
+    private static void theBiggestOf2Digit(Map<Integer, String> stringStringMap) {
 
         int max = 0;
         for (int i = 0; i < stringStringMap.size(); i++) {
@@ -50,6 +89,5 @@ public class LargestPalindromeProduct {
             a++;
         }
         return palindromy2digit;
-
     }
 }
