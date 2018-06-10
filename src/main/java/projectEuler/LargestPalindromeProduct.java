@@ -24,7 +24,7 @@ public class LargestPalindromeProduct {
         for (int i = 0; i < integerStringMap.size(); i++) {
             max = Collections.max(integerStringMap.keySet());
         }
-        System.out.print("Largest palindrome made from the produck of dwo 3-digit numbers is: " + max + " = " + integerStringMap.get(max));
+        System.out.print("Largest palindrome made from the produck of dwo 3-digit numbers is:  " + max + " = " + integerStringMap.get(max));
         System.out.println();
     }
 
