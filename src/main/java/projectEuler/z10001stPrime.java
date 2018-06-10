@@ -4,6 +4,7 @@ package projectEuler;
 //
 //        What is the 10 001st prime number?
 
+import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -14,7 +15,7 @@ public class z10001stPrime {
         long n = 1;
         Set<Long> longSet = new LinkedHashSet<>();
 
-        while (n <= 6) {
+        while (n <= 10001) {
             int k = 0;
             for (long j = 2; j <= i; j++) {
 
@@ -28,7 +29,7 @@ public class z10001stPrime {
             }
             i++;
         }
-        System.out.println(longSet);
+        System.out.println(Collections.max(longSet));
     }
 }
 
