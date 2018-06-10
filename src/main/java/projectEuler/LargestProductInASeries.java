@@ -52,11 +52,20 @@ public class LargestProductInASeries {
 
         long result = 0;
         long greatestProduct = 0;
-        for (int i = 0; i < number.length() - 3; i++) {
-            result = Character.getNumericValue(number.charAt(i)) *
+        for (int i = 0; i < number.length() - 12; i++) {
+            result = (long) Character.getNumericValue(number.charAt(i)) *
                     Character.getNumericValue(number.charAt(i + 1)) *
                     Character.getNumericValue(number.charAt(i + 2)) *
-                    Character.getNumericValue(number.charAt(i + 3));
+                    Character.getNumericValue(number.charAt(i + 3)) *
+                    Character.getNumericValue(number.charAt(i + 4)) *
+                    Character.getNumericValue(number.charAt(i + 5)) *
+                    Character.getNumericValue(number.charAt(i + 6)) *
+                    Character.getNumericValue(number.charAt(i + 7)) *
+                    Character.getNumericValue(number.charAt(i + 8)) *
+                    Character.getNumericValue(number.charAt(i + 9)) *
+                    Character.getNumericValue(number.charAt(i + 10)) *
+                    Character.getNumericValue(number.charAt(i + 11)) *
+                    Character.getNumericValue(number.charAt(i + 12));
             if (result > greatestProduct) {
                 greatestProduct = result;
             }
