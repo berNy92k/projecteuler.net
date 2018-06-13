@@ -20,7 +20,7 @@ public class EvenFibonacciNumbers {
         System.out.println();
 
         if (fibonacciResult() == 4613732) {
-            System.out.println("Odpowiedź poprawna");
+            System.out.println("Odpowiedź poprawna - " + fibonacciResult());
         } else {
             System.out.println("Odpowiedź niepoprawna - powinna być - 4613732, jest: " + fibonacciResult());
         }
