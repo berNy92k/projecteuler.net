@@ -9,25 +9,25 @@ public class SummationOfPrimes {
 
 		System.out.println("START");
 
-		int a = 10;
+		long a = 10;
 		sumOfThePrimesNumber(a);
 
 		System.out.println();
 
-		int b = 2000000;
+		long b = 2000000;
 		sumOfThePrimesNumber(b);
 
 		System.out.println("STOP");
 
 	}
 
-	private static void sumOfThePrimesNumber(int a) {
+	private static void sumOfThePrimesNumber(long a) {
 
-		int sum = 0;
+		long sum = 0;
 
-		for (int i = 2; i < a; i++) {
-			int k = 0;
-			for (int j = 2; j <= i; j++) {
+		for (long i = 2; i < a; i++) {
+			long k = 0;
+			for (long j = 2; j <= i; j++) {
 				if (i % j == 0) {
 					k++;
 				}
