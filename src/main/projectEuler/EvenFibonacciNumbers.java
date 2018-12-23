@@ -14,7 +14,7 @@
 public class EvenFibonacciNumbers {
     public static void main(String[] args) {
 
-        System.out.println("Suma ciagu Finbonaciego dla ktÃ³rej nie przekracza 4 milionÃ³w - parzystych liczb");
+        System.out.println("Suma ciagu Finbonaciego dla której nie przekracza 4 milionów - parzystych liczb");
 
         System.out.println();
 
